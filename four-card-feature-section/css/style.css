@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+font-size: 15px;
+--font:'Poppins', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    height: 100vh;
+    background: #fafafa;
+}
+
+.container{
+    text-align: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+
+
+
+.lead h1{
+    font-weight: 400;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.lead span{
+    font-weight: 600;
+    display: block;
+}
+
+.lead p{
+    max-width: 510px;
+    font-weight: 200;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.cards-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 5em;
+    /* padding-bottom: 5em; */
+}
+
+.cards-grid h2{
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cards-grid p{
+    font-weight: 200;
+    font-size: 0.9em;
+}
+
+.cards-grid img{
+    display: block;
+    margin-left: calc(100% - 4em);
+}
+
+.mid-cards{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+[class^="card-"]{
+    max-width: 350px;
+    max-height: 250px;
+    padding: 1.8em 2em;
+    
+    border-radius: 0.2em;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+    text-align: left;
+    margin-right: 2em;
+    box-shadow: -4px 7px 13px 0px #d9e2ed
+}
+
+.card-cyan{
+    border-top: 4px solid var(--Cyan);
+}
+
+.card-red{
+    border-top: 4px solid var(--Red);
+}
+
+.card-yellow{
+    border-top: 4px solid var(--Orange);
+}
+
+.card-blue{
+    border-top: 4px solid var(--Blue);
+}
+
+
+@media screen and (max-width:1200px){
+    .lead{
+        padding-top: 4em;
+    }
+
+    .cards-grid{
+        padding-top: 5em;
+        padding-bottom: 5em;
+    }
+
+    .mid-cards{
+        flex-direction: row;
+    }
+}
+
+
+
+@media screen and (max-width:818px){
+    .mid-cards{
+        flex-direction: column;
+    }
+}
